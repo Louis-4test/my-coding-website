@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics - Understanding the Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #2c3e50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .video-container {
+            display: none; /* Hidden by default */
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #35424a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2c3e50;
+        }
+
+        .exercise {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Basics: Understanding the Box Model</h1>
+    </header>
+
+    <nav>
+        <a href="#textContent">Text Explanation</a>
+        <a href="#videoContent">Video Explanations</a>
+        <a href="#exercises">Exercises</a>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Resources</h2>
+            <button id="textBtn">Text Explanation</button>
+            <button id="videoBtn">Video Explanations</button>
+        </aside>
+
+        <main class="main-content">
+            <div id="textContent">
+                <h2>The CSS Box Model</h2>
+                <p>The CSS Box Model is a crucial concept in web design. It describes the boxes generated for elements in the document tree and how these boxes interact with each other.</p>
+
+                <h3>Components of the Box Model</h3>
+                <p>The box model consists of the following components:</p>
+                <ul>
+                    <li><strong>Margin:</strong> The outermost space that separates the element from others.</li>
+                    <li><strong>Border:</strong> The line surrounding the padding and content.</li>
+                    <li><strong>Padding:</strong> The space between the content and the border.</li>
+                    <li><strong>Content:</strong> The actual content of the box (text, images, etc.).</li>
+                </ul>
+
+                <h3>Example Code</h3>
+                <p>Here’s an example of how the box model is applied using HTML and CSS:</p>
+                <pre>
+                    <code>
+&lt;div class="box"&gt;
+    &lt;h2&gt;This is a box&lt;/h2&gt;
+    &lt;p&gt;Some content inside the box.&lt;/p&gt;
+&lt;/div&gt;
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #333;
+    margin: 15px;
+}
+                    </code>
+                </pre>
+                <p>In this example, the width of the box is 300 pixels, with a padding of 20 pixels and a border of 5 pixels. Margins are set to 15 pixels.</p>
+
+                <h3>Practical Exercises</h3>
+                <div id="exercises" class="exercise">
+                    <h4>Exercise 1:</h4>
+                    <p>Create a box using the CSS Box Model that includes a title and some content. Adjust the margins, padding, and borders to see how they affect the box's size and layout.</p>
+                </div>
+                <div class="exercise">
+                    <h4>Exercise 2:</h4>
+                    <p>Modify the box's CSS properties to create a hover effect that changes the border color when the mouse hovers over it.</p>
+                </div>
+            </div>
+
+            <div id="videoContent" class="video-container">
+                <h2>Video Explanations</h2>
+                <p>Select a video to learn about the Box Model:</p>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/VwZcMfRaqaQ" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=VwZcMfRaqaQ" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/0xFsVpEaq4" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=0xFsVpEaq4" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/Ot49q25Zp3o" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=Ot49q25Zp3o" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/CdK3SjM42jI" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=CdK3SjM42jI" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/R42FJv2caWs" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=R42FJv2caWs" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/K01U-QfEeuA" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=K01U-QfEeuA" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/WL-tFsb_9P4" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=WL-tFsb_9P4" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/PCtcnjBd2cI" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=PCtcnjBd2cI" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/Dbe8qvmEXSw" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=Dbe8qvmEXSw" target="_blank">View on YouTube</a></p>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/X4O3oc61Ess" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=X4O3oc61Ess" target="_blank">View on YouTube</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Coding Academy - All rights reserved</p>
+    </footer>
+
+    <script>
+        const textContent = document.getElementById('textContent');
+        const videoContent = document.getElementById('videoContent');
+        const videoContainer = document.querySelector('.video-container');
+        
+        document.getElementById('textBtn').onclick = function() {
+            textContent.style.display = 'block';
+            videoContainer.style.display = 'none';
+        };
+
+        document.getElementById('videoBtn').onclick = function() {
+            textContent.style.display = 'none';
+            videoContainer.style.display = 'block';
+        };
+
+        // Set default display
+        textContent.style.display = 'block';
+        videoContainer.style.display = 'none';
+    </script>
+</body>
+</html>

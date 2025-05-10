@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"> <!-- Main stylesheet for shared styles -->
+    <link rel="stylesheet" href="css/sorting.css"> <!-- Specific CSS for this page -->
+    <title>Sorting Algorithms - Coding Academy</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Coding Academy</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../coding/index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+            <a href="../algorithms/index.html">Algorithms</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Algorithms</h2>
+            <ul>
+                <li><a href="sorting.html">Sorting Algorithms</a></li>
+                <li><a href="computational.html">Computational Algorithm</a></li>
+                <li><a href="advanced.html">Advanced Algorithm</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h1>Sorting Algorithms</h1>
+            
+            <h2>1. Merge Sort</h2>
+            <p>Merge Sort is a divide and conquer algorithm that was invented by John von Neumann in 1945. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.</p>
+            <pre>
+function mergeSort(arr):
+    if length(arr) <= 1:
+        return arr
+    mid = length(arr) / 2
+    left = mergeSort(arr[0...mid])
+    right = mergeSort(arr[mid...end])
+    return merge(left, right)
+            </pre>
+
+            <h2>2. Bubble Sort</h2>
+            <p>Bubble Sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
+            <pre>
+function bubbleSort(arr):
+    n = length(arr)
+    for i from 0 to n-1:
+        for j from 0 to n-i-2:
+            if arr[j] > arr[j+1]:
+                swap(arr[j], arr[j+1])
+            return arr
+            </pre>
+
+            <h2>3. Quick Sort</h2>
+            <p>Quick Sort is a comparison sorting algorithm that uses divide and conquer principles to sort lists. It selects a pivot element and partitions the other elements into two sub-arrays, according to whether they are less than or greater than the pivot.</p>
+            <pre>
+function quickSort(arr):
+    if length(arr) <= 1:
+        return arr
+    pivot = arr[length(arr) / 2]
+    left = filter(n => n < pivot, arr)
+    middle = filter(n => n == pivot, arr)
+    right = filter(n => n > pivot, arr)
+    return quickSort(left) + middle + quickSort(right)
+            </pre>
+
+            <h2>4. Insertion Sort</h2>
+            <p>Insertion Sort is an efficient algorithm for sorting small data sets. It builds the final sorted array one item at a time, taking each element from the input and finding the correct position in the already sorted part of the array.</p>
+            <pre>
+function insertionSort(arr):
+    for i from 1 to length(arr):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        arr[j + 1] = key
+    return arr
+            </pre>
+
+            <h2>5. Selection Sort</h2>
+            <p>Selection Sort is a simple comparison sorting algorithm. It divides the input array into two parts: the sorted and the unsorted parts. The smallest element from the unsorted part is selected and swapped with the first unsorted element.</p>
+            <pre>
+function selectionSort(arr):
+    n = length(arr)
+    for i from 0 to n-1:
+        minIndex = i
+        for j from i+1 to n:
+            if arr[j] < arr[minIndex]:
+                minIndex = j
+        swap(arr[i], arr[minIndex])
+    return arr
+            </pre>
+            
+            <h2>Interactive Sorting</h2>
+            <p>Enter an array of numbers separated by commas to see the sorted result:</p>
+            <input type="text" id="arrayInput" placeholder="Enter numbers (e.g., 5,3,8,6)">
+            <button onclick="sortArray()">Sort Array</button>
+            <p id="sortedOutput"></p>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../coding/index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+            <a href="../algorithms/index.html">Algorithms</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        function bubbleSort(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // Swap elements
+                    }
+                }
+            }
+            return arr;
+        }
+
+        function insertionSort(arr) {
+            for (let i = 1; i < arr.length; i++) {
+                let key = arr[i];
+                let j = i - 1;
+                while (j >= 0 && arr[j] > key) {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+                arr[j + 1] = key;
+            }
+            return arr;
+        }
+
+        function selectionSort(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]; // Swap elements
+            }
+            return arr;
+        }
+
+        function quickSort(arr) {
+            if (arr.length <= 1) {
+                return arr;
+            }
+            const pivot = arr[Math.floor(arr.length / 2)];
+            const left = arr.filter(x => x < pivot);
+            const middle = arr.filter(x => x === pivot);
+            const right = arr.filter(x => x > pivot);
+            return [...quickSort(left), ...middle, ...quickSort(right)];
+        }
+
+        function mergeSort(arr) {
+            if (arr.length <= 1) {
+                return arr;
+            }
+            const mid = Math.floor(arr.length / 2);
+            const left = mergeSort(arr.slice(0, mid));
+            const right = mergeSort(arr.slice(mid));
+            return merge(left, right);
+        }
+
+        function merge(left, right) {
+            const result = [];
+            let leftIndex = 0;
+            let rightIndex = 0;
+            while (leftIndex < left.length && rightIndex < right.length) {
+                if (left[leftIndex] < right[rightIndex]) {
+                    result.push(left[leftIndex]);
+                    leftIndex++;
+                } else {
+                    result.push(right[rightIndex]);
+                    rightIndex++;
+                }
+            }
+            return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+        }
+
+        function sortArray() {
+            const input = document.getElementById('arrayInput').value.split(',').map(Number);
+            const sorted = mergeSort(input); // You can replace with bubbleSort, insertionSort, selectionSort, or quickSort
+            document.getElementById('sortedOutput').innerText = `Sorted Array: ${sorted.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

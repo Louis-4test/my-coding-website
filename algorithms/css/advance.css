@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+main {
+    flex-grow: 1;
+    margin-left: 200px; /* Adjust based on sidebar width */
+    padding: 20px; /* Add padding for the main content */
+}
+
+.toc {
+    background: #ecf0f1; /* Light grey background for table of contents */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.toc h2 {
+    margin-top: 0; /* Remove top margin for h2 */
+    color: #2980B9; /* Bright blue for contrast */
+}
+
+.toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.toc ul li {
+    margin: 5px 0;
+}
+
+.toc ul li a {
+    text-decoration: none;
+    color: #34495E; /* Dark grey for links in table of contents */
+}
+
+.toc ul li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+h2 {
+    color: #2980B9; /* Bright blue color */
+    border-bottom: 2px solid #2980B9; /* Underline for h2 headers */
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #34495E; /* Dark grey color */
+}
+
+p {
+    margin: 10px 0; /* Spacing between paragraphs */
+}
+
+ul, ol {
+    margin-left: 20px; /* Indentation for lists */
+}
+
+pre {
+    background: #ECF0F1; /* Light background for code blocks */
+    padding: 10px;
+    border-left: 5px solid #2C3E50; /* Border on the left to highlight */
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
+

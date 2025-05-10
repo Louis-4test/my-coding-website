@@ -1,0 +1,59 @@
+/* Styles for Sorting Algorithms Page */
+
+main {
+    padding: 20px; /* Padding around the main content */
+    text-align: left; /* Align text to the left for better readability */
+}
+
+main h1 {
+    color: #333; /* Heading color */
+    font-size: 2em; /* Font size for heading */
+}
+
+main h2 {
+    color: #555; /* Subheading color */
+    font-size: 1.5em; /* Size for subheadings */
+    margin-top: 20px; /* Space above subheadings */
+}
+
+main p {
+    color: #666; /* Paragraph text color */
+    font-size: 1.1em; /* Font size for paragraphs */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+pre {
+    background-color: #f8f8f8; /* Light background for code blocks */
+    border: 1px solid #ddd; /* Border for code blocks */
+    padding: 10px; /* Padding inside code blocks */
+    overflow-x: auto; /* Allow horizontal scrolling for long lines */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+}
+
+input[type="text"] {
+    padding: 10px; /* Padding for input */
+    width: 300px; /* Width of the input fields */
+    margin-right: 10px; /* Space between inputs */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    padding: 10px 15px; /* Padding for button */
+    background-color: #333; /* Button background */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #555; /* Darker color on hover */
+}
+
+#sortedOutput {
+    margin-top: 20px; /* Space above output text */
+    font-size: 1.2em; /* Output font size */
+    color: #000; /* Output text color */
+}

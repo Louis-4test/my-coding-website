@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"> <!-- Main stylesheet for shared styles -->
+    <link rel="stylesheet" href="styles/computational-style.css"> <!-- Specific CSS for this page -->
+    <title>Computational Algorithm - Coding Academy</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Coding Academy</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../coding/index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+            <a href="../algorithms/index.html">Algorithms</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Algorithms</h2>
+            <ul>
+                <li><a href="computational.html">Computational Algorithm</a></li>
+                <li><a href="sorting.html">Sorting Algorithm</a></li>
+                <li><a href="advanced.html">Advanced Algorithm</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h1>Computational Algorithm</h1>
+            <p>A computational algorithm is a step-by-step procedure used for calculations, data processing, and automated reasoning tasks.</p>
+
+            <h2>Pseudocode Example</h2>
+            <pre>
+function computeSum(a, b):
+    return a + b
+            </pre>
+
+            <h2>Description</h2>
+            <p>This simple function accepts two arguments, <em>a</em> and <em>b</em>, and returns their sum. This represents a basic example of a computational algorithm.</p>
+            
+            <h2>Example Usage</h2>
+            <p>You can test the function using the following JavaScript code:</p>
+            <pre>
+let result = computeSum(5, 10);
+console.log(result); // Outputs: 15
+            </pre>
+
+            <p>Click the button below to see an example in action:</p>
+            <input type="number" id="inputA" placeholder="Enter first number">
+            <input type="number" id="inputB" placeholder="Enter second number">
+            <button onclick="calculate()">Compute Sum</button>
+            <p id="output"></p>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../coding/index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+            <a href="../algorithms/index.html">Algorithms</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        function computeSum(a, b) {
+            return a + b;
+        }
+
+        function calculate() {
+            const a = parseInt(document.getElementById('inputA').value);
+            const b = parseInt(document.getElementById('inputB').value);
+            const result = computeSum(a, b);
+            document.getElementById('output').innerText = `The sum of ${a} and ${b} is: ${result}`;
+        }
+    </script>
+</body>
+</html>

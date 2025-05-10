@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="css/advance.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <header>
+        <div class="logo">Coding Academy</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../coding/index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+            <a href="../algorithms/index.html">Algorithms</a>
+        </nav>
+    </header>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>Algorithms</h2>
+        <ul>
+            <li><a href="sorting.html">Sorting Algorithms</a></li>
+            <li><a href="computational.html">Computational Algorithm</a></li>
+            <li><a href="advanced.html">Advanced Algorithm</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#greedy">1. Greedy Algorithms</a></li>
+                <li><a href="#divide-conquer">2. Divide and Conquer Algorithms</a></li>
+                <li><a href="#backtracking">3. Backtracking Algorithms</a></li>
+                <li><a href="#dynamic-programming">4. Dynamic Programming Algorithms</a></li>
+            </ul>
+        </nav>
+
+        <section id="greedy">
+            <h2>1. Greedy Algorithms</h2>
+            <p><strong>Definition:</strong> Greedy algorithms make a series of choices that are locally optimal, with the hope that these choices will lead to a global optimum.</p>
+            <h3>How They Work:</h3>
+            <ol>
+                <li><strong>Make a Choice:</strong> Choose the best option available at the moment.</li>
+                <li><strong>Feasibility Check:</strong> Ensure that this choice does not violate any constraints.</li>
+                <li><strong>Repeat:</strong> Move on to the next stage, making similar choices until a solution is formed.</li>
+            </ol>
+            <h3>Pseudocode:</h3>
+            <pre>
+function greedyAlgorithm(items, capacity):
+    totalValue = 0
+    sort(items by value/weight ratio)
+    for each item in items:
+        if item.weight <= capacity:
+            capacity -= item.weight
+            totalValue += item.value
+        else:
+            totalValue += item.value * (capacity / item.weight)
+            break
+    return totalValue
+            </pre>
+            <h3>Common Examples:</h3>
+            <ul>
+                <li><strong>Fractional Knapsack Problem</strong></li>
+                <li><strong>Job Sequencing Problem</strong></li>
+                <li><strong>Prim's Algorithm</strong></li>
+                <li><strong>Kruskal's Algorithm</strong></li>
+            </ul>
+        </section>
+
+        <section id="divide-conquer">
+            <h2>2. Divide and Conquer Algorithms</h2>
+            <p><strong>Definition:</strong> Divide-and-Conquer algorithms solve problems by breaking them into smaller subproblems, solving each recursively, and combining solutions.</p>
+            <h3>How They Work:</h3>
+            <ol>
+                <li><strong>Divide:</strong> Split the problem into smaller, manageable subproblems.</li>
+                <li><strong>Conquer:</strong> Solve each subproblem recursively. If they are small enough, solve them directly.</li>
+                <li><strong>Combine:</strong> Merge the solutions to form a solution to the original problem.</li>
+            </ol>
+            <h3>Pseudocode:</h3>
+            <pre>
+function mergeSort(array):
+    if length(array) <= 1:
+        return array
+
+    mid = length(array) / 2
+    left = mergeSort(array[0:mid])
+    right = mergeSort(array[mid:length(array)])
+    return merge(left, right)
+
+function merge(left, right):
+    result = []
+    while left and right are not empty:
+        if left[0] <= right[0]:
+            append left[0] to result
+            remove left[0]
+        else:
+            append right[0] to result
+            remove right[0]
+    return result + left + right
+            </pre>
+            <h3>Common Examples:</h3>
+            <ul>
+                <li><strong>Merge Sort</strong></li>
+                <li><strong>Quick Sort</strong></li>
+                <li><strong>Binary Search</strong></li>
+            </ul>
+        </section>
+
+        <section id="backtracking">
+            <h2>3. Backtracking Algorithms</h2>
+            <p><strong>Definition:</strong> Backtracking algorithms solve problems incrementally, exploring solutions by building candidates and abandoning candidates that fail constraints.</p>
+            <h3>How They Work:</h3>
+            <ol>
+                <li><strong>Make a Decision:</strong> Select an option that seems promising.</li>
+                <li><strong>Check Feasibility:</strong> If the option leads to a valid state, proceed; if not, backtrack.</li>
+                <li><strong>Proceed or Backtrack:</strong> If exhausted, move back to the previous decision point.</li>
+            </ol>
+            <h3>Pseudocode:</h3>
+            <pre>
+function solveNQueens(n):
+    board = create n x n board initialized to 0
+    if placeQueen(board, 0, n):
+        printBoard(board)
+    else:
+        print "No solution exists"
+
+function placeQueen(board, row, n):
+    if row >= n:
+        return true
+    for col from 0 to n-1:
+        if isSafe(board, row, col):
+            board[row][col] = 1
+            if placeQueen(board, row + 1, n):
+                return true
+            board[row][col] = 0
+    return false
+            </pre>
+            <h3>Common Examples:</h3>
+            <ul>
+                <li><strong>N-Queens Problem</strong></li>
+                <li><strong>Sudoku Solver</strong></li>
+                <li><strong>Crossword Puzzle Solver</strong></li>
+            </ul>
+        </section>
+
+        <section id="dynamic-programming">
+            <h2>4. Dynamic Programming Algorithms</h2>
+            <p><strong>Definition:</strong> Dynamic Programming is an optimization method to solve complex problems by breaking them into simpler subproblems and storing results for reuse.</p>
+            <h3>How They Work:</h3>
+            <ul>
+                <li><strong>Bottom-Up (Tabulation):</strong> Builds solutions iteratively by solving all subproblems first.</li>
+                <li><strong>Top-Down (Memoization):</strong> Recursively solves problems while storing solutions of subproblems to avoid recomputation.</li>
+            </ul>
+            <h3>Pseudocode:</h3>
+            <pre>
+function fibonacci(n):
+    if n <= 1:
+        return n
+    memo = array of size n+1 initialized to -1
+    return fibonacciMemo(n, memo)
+
+function fibonacciMemo(n, memo):
+    if memo[n] != -1:
+        return memo[n]
+    memo[n] = fibonacciMemo(n-1, memo) + fibonacciMemo(n-2, memo)
+    return memo[n]
+            </pre>
+            <h3>Common Examples:</h3>
+            <ul>
+                <li><strong>Fibonacci Series</strong></li>
+                <li><strong>0/1 Knapsack Problem</strong></li>
+                <li><strong>Longest Common Subsequence (LCS)</strong></li>
+            </ul>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../coding/index.html">Coding</a>
+        <a href="../programming/index.html">Programming</a>
+        <a href="../algorithms/index.html">Algorithms</a>
+        <a href="#">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>

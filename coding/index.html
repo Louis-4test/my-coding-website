@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to the global stylesheet -->
+    <link rel="stylesheet" href="css/coding_styles.css"> <!-- Specific CSS for this page -->
+    <title>Coding - Coding Academy</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Coding Academy</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Coding Topics</h2>
+            <ul id="coding-list">
+                <li><a href="html.html">HTML Basics</a></li>
+                <li><a href="css.html">CSS Styling</a></li>
+                <li><a href="javascript.html">JavaScript Introduction</a></li>
+                <li><a href="advanced.html">Advanced Topics</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h1>Welcome to the Coding Section</h1>
+            <p>Discover the world of coding, programming languages, and web development fundamentals!</p>
+            <input type="text" id="search-bar" placeholder="Search Coding Topics..." onkeyup="filterCodingTopics()">
+            <button id="search">Search</button>
+
+            <!-- Introduction Section -->
+            <section class="intro">
+                <h2>Introduction to Coding</h2>
+                <p>Coding is the process of creating instructions for computers using programming languages. It forms the backbone of software development, web applications, and system controls.</p>
+                <p>In this section, you will learn essential coding languages such as HTML, CSS, and JavaScript, which are foundational for web development. You'll gain the skills to create your own websites, enhance user experiences, and adapt to new challenges in technology.</p>
+                <p>Understanding coding can lead to opportunities in multiple fields including software engineering, data science, web development, and more. Each topic here is designed to be accessible for beginners while providing depth for those looking to enhance their skills.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#team">Team</a>
+            <a href="#conditions">Terms and Conditions</a>
+            <a href="#privacy">Privacy Policy</a>
+            <p>&copy; 2024 Coding Academy</p>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        // Sample array of coding topics for demonstration
+        const codingTopics = [
+            { name: "HTML Basics", url: "html.html" },
+            { name: "CSS Styling", url: "css.html" },
+            { name: "JavaScript Introduction", url: "javascript.html" },
+            { name: "Advanced Topics", url: "advanced.html" },
+        ];
+
+        // Function to filter the coding topics based on search input
+        function filterCodingTopics() {
+            const input = document.getElementById('search-bar').value.toLowerCase();
+            const items = document.querySelectorAll('#coding-list li');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        // Simple addition calculation function
+        function calculate() {
+            const numA = parseFloat(document.getElementById('inputA').value);
+            const numB = parseFloat(document.getElementById('inputB').value);
+            const sum = numA + numB;
+            document.getElementById('output').textContent = `The sum is: ${sum}`;
+        }
+    </script>
+</body>
+</html>

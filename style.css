@@ -1,0 +1,159 @@
+/* Global Styles */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+html, body {
+    height: 100%; /* Makes sure the body takes the full height of the viewport */
+    margin: 0; /* Removes default margin */
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea; /* Light gray background for a soft look */
+}
+
+header {
+    background: #4a90e2; /* Bright blue header for an energetic feel */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.one{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px; /* Increased padding for main content */
+    text-align: justify; /* Justify align all text within the main section */
+}
+
+main section {
+    /*margin: 20px; /* Space between sections */
+    padding: 15px; /* Padding inside each section */
+    background-color: #f9f9f9; /* Light background for readability */
+    /*border-radius: 5px; /* Rounded corners for sections */
+    /*border: 1px solid #ddd; /* Light border around sections */
+}
+
+h2 {
+    color: #333; /* Color for section titles */
+    text-align: center; /* Center align section titles */
+}
+
+h3{
+    font-size: x-large;
+}
+
+p{
+    margin: 20px;
+    text-align: justify;
+    font-size: x-large;
+}
+
+section ul li{
+    text-align: justify;
+    font-size: x-large;
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 80px); /* Adjusts height to fit after header height */
+}
+
+.sidebar {
+    width: 200px;
+    background: #2c3e50; /* Darker blue-gray for the sidebar */
+    color: #fff;
+    padding: 15px;
+    height: 100%; /* Ensures sidebar takes the full height */
+    font-size: large;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    color: #ecf0f1; /* Light gray for links */
+    text-decoration: none;
+    padding: 8px;
+    display: block; /* Makes the entire area clickable */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.sidebar a:hover {
+    background: #34495e; /* Darker color on hover for effect */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto; /* Allows scrolling within the main section if content exceeds the height */
+}
+
+#search {
+    margin-top: 30px;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 300px;
+    font-size: x-large;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #27ae60; /* Attractive green for buttons */
+    color: #fff;
+    font-size: x-large;
+    border: none;
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #219150; /* Darker green when hovering */
+}
+
+footer {
+    background: #4a90e2; /* Same bright blue as the header */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Keep footer static within the layout */
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: larger;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+    color: #ecf0f1; /* Lighter gray on hover */
+}

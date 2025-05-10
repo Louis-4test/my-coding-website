@@ -1,0 +1,128 @@
+/* Specific Styles for Algorithms Page */
+
+/* Ensure consistent typography styles as in homepage */
+body {
+    background-color: #f4f4f4; /* Background color */
+    font-family: 'Arial', sans-serif; /* Use the same font as the homepage */
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 80px); /* Subtract header height */
+}
+
+.sidebar {
+    width: 200px; /* Fixed width for sidebar */
+    background: #444; /* Dark background for sidebar */
+    color: #fff; /* White text color */
+    padding: 15px; /* Inner padding */
+    height: 100%; /* Full height */
+}
+
+.sidebar h2 {
+    margin-top: 0; /* Remove top margin for h2 */
+    font-size: 1.5em; /* Font size to match homepage */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Vertical spacing for list items */
+}
+
+.sidebar a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* No underlines */
+    font-weight: bold; /* Bold links for emphasis */
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+main {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Padding around the main content */
+    text-align: center; /* Center text */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+main h1 {
+    color: #333; /* Main heading color */
+    font-size: 2em; /* Size for the main heading */
+}
+
+main p {
+    color: #666; /* Subtle color for paragraphs */
+    font-size: 1.2em; /* Size for paragraph text */
+}
+
+input[type="text"] {
+    padding: 10px; /* Padding for input */
+    width: 200px; /* Input width */
+    margin-top: 20px; /* Margin above */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #27ae60; /* Attractive green for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #219150; /* Darker on hover */
+}
+
+.intro {
+    margin-top: 20px; /* Space above the introduction */
+    padding: 15px; /* Padding inside the section */
+    background-color: #fff; /* Background color for the intro area */
+    border: 1px solid #ddd; /* Border for definition */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.intro h2 {
+    color: #333; /* Color for the introduction heading */
+    font-size: 1.8em; /* Size for the introduction heading */
+}
+
+.intro p {
+    color: #666; /* Color for introduction paragraphs */
+    font-size: 1.1em; /* Size for introduction paragraphs */
+    line-height: 1.6; /* Improved readability */
+}
+
+footer {
+    background: #4a90e2; /* Same bright blue as the header */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Keep footer static within the layout */
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+    color: #ecf0f1; /* Lighter gray on hover */
+}

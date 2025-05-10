@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/algorithm_styles.css"> <!-- Specific CSS for this page -->
+    <title>Algorithms - Coding Academy</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Coding Academy</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../coding/index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Algorithms</h2>
+            <ul id="algorithm-list">
+                <!-- Algorithm list will be populated here via JavaScript -->
+            </ul>
+        </aside>
+
+        <main>
+            <h1>Welcome to the Algorithms Section</h1>
+            <p>Learn about different types of algorithms, their applications, and implementations.</p>
+            <input type="text" id="search-bar" placeholder="Search Algorithms..." onkeyup="filterAlgorithms()">
+            <button id="search">Search</button>
+
+            <main>
+                <!-- Introduction Section -->
+                <section class="intro">
+                    <h2>Introduction to Algorithms</h2>
+                    <p>
+                        An algorithm is a well-defined procedure or a step-by-step set of instructions used to solve a problem or perform a task. Algorithms form the foundational principles of computer science, and they play a crucial role in programming and software development. Understanding algorithms allows individuals to approach complex problems in a structured manner.
+                    </p>
+                    <p>
+                        If you are interested in learning about algorithms, you will find a wide range of topics, from basic algorithms that handle sorting and searching to advanced algorithms used in artificial intelligence and data analysis. This knowledge opens up numerous opportunities in various fields, including software engineering, data science, and machine learning.
+                    </p>
+                    <p>
+                        The importance of algorithms cannot be overstated. They enable efficient data processing, which is essential in a world increasingly driven by technology and data. Algorithms help in optimizing tasks, reducing resource usage, and improving overall system performance.
+                    </p>
+                    <p>
+                        Applications of algorithms are present in our daily lives, from the search algorithms used by Google to find relevant information on the internet, to the recommendation algorithms that suggest movies or products based on our preferences. Whether you're using GPS navigation, online shopping, or even social media feeds, algorithms are the unseen drivers that enhance our experiences and decision-making processes.
+                    </p>
+                </section>
+                <p>Don't give up on Algorithm. Try this</p>
+                <!-- Search Bar and Button -->
+                <input type="number" id="inputA" placeholder="Enter first number">
+                <input type="number" id="inputB" placeholder="Enter second number">
+                <button onclick="calculate()">Compute Sum</button>
+                <p id="output"></p>
+                <!-- End of Introduction Section -->
+            </main>
+            
+        </main>
+    </div>
+    
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#team">Team</a>
+            <a href="#conditions">Terms and Conditions</a>
+            <a href="#privacy">Privacy Policy</a>
+            <p>&copy; 2024 Ludwig</p>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        // Sample array of algorithms and their corresponding pages
+        const algorithms = [
+            { name: "Computational Algorithm", url: "computational.html" },
+            { name: "Sorting Algorithm", url: "sorting.html" },
+            { name: "Advanced Algorithm", url: "advanced.html" },
+            // Add more algorithms as needed
+        ];
+
+        // Function to populate the algorithm list
+        function populateAlgorithms() {
+            const algorithmList = document.getElementById('algorithm-list');
+            algorithms.forEach(algo => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${algo.url}">${algo.name}</a>`;
+                algorithmList.appendChild(li);
+            });
+        }
+
+        // Function to filter the algorithms based on search input
+        function filterAlgorithms() {
+            const input = document.getElementById('search-bar').value.toLowerCase();
+            const items = document.querySelectorAll('#algorithm-list li');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        // Call the function to populate algorithms on page load
+        window.onload = populateAlgorithms;
+    </script>
+</body>
+</html>

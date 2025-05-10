@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background: #35424a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 20px; /* Added top padding to prevent overlap with fixed header */
+}
+aside.sidebar {
+    flex: 1;
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top: 80px; /* Positioning below the fixed header */
+    height: calc(100% - 80px);
+    overflow-y: auto;
+}
+aside.sidebar h2 {
+    margin-top: 0;
+}
+aside.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+aside.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+aside.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+main {
+    flex: 3;
+    padding: 20px;
+    background: #ffffff;
+    margin-left: 220px; /* Adding left margin for sidebar */
+}
+h2 {
+    color: #35424a;
+}
+section {
+    margin-bottom: 20px;
+}
+code {
+    background: #f4f4f4;
+    padding: 5px;
+    display: block;
+    margin: 10px 0;
+}
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    overflow: auto;
+}
+.video-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows wrapping to the next row if screen size is small */
+    justify-content: center;
+    align-items: center;
+}
+.video-item {
+    margin: 10px; /* Space between video items */
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #35424a;
+    color: white;
+    position: relative; /* Ensures footer is not fixed and appears at the bottom */
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}

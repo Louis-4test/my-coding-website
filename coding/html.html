@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to the global stylesheet -->
+    <link rel="stylesheet" href="css/html.css"> <!-- Specific CSS for HTML basics page -->
+    <title>HTML Basics - Coding Academy</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Coding Academy</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./index.html">Coding</a>
+            <a href="../programming/index.html">Programming</a>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Choose Your Learning Style</h2>
+            <button id="textLearning">Textual Learning</button>
+            <button id="videoLearning">Video Learning</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Coding Topics</h2>
+            <ul id="coding-list">
+                <li><a href="html.html">HTML Basics</a></li>
+                <li><a href="css.html">CSS Styling</a></li>
+                <li><a href="javascript.html">JavaScript Introduction</a></li>
+                <li><a href="advanced.html">Advanced Topics</a></li>
+            </ul>
+        </aside>
+
+        <main id="mainContent">
+            <h2>HTML Topics</h2>
+            <ul>
+                <li><a href="#what-is-html">What is HTML?</a></li>
+                <li><a href="#basic-structure">Basic Structure of an HTML Document</a></li>
+                <li><a href="#elements-and-tags">HTML Elements and Tags</a></li>
+                <li><a href="#attributes">HTML Attributes</a></li>
+                <li><a href="#practical-exercises">Practical Exercises</a></li>
+            </ul>
+
+            <div id="textContent" class="hidden">
+                <h1>HTML Basics</h1>
+
+                <section id="what-is-html">
+                    <h2>What is HTML?</h2>
+                    <p>HTML (Hypertext Markup Language) is the standard markup language used to create web pages. 
+                    It structures the content on the web and allows for elements like text, images, links, and more to be displayed in a browser.</p>
+                    <p>HTML uses "tags" to mark up text, images, links, and other content. For example:</p>
+                    <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+                </section>
+
+                <section id="basic-structure">
+                    <h2>Basic Structure of an HTML Document</h2>
+                    <p>A typical HTML document has the following structure:</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML Basics&lt;/h1&gt;
+    &lt;p&gt;This is an introduction to HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <p>Make sure to include the <code>&lt;!DOCTYPE html&gt;</code> declaration to define this document as HTML5.</p>
+                </section>
+
+                <section id="elements-and-tags">
+                    <h2>HTML Elements and Tags</h2>
+                    <p>HTML elements are defined by tags. Here are some common HTML tags:</p>
+                    <ul>
+                        <li><code>&lt;h1&gt; ... &lt;h6&gt;</code>: Header tags for headings of different levels.</li>
+                        <li><code>&lt;p&gt;</code>: Paragraph tag for blocks of text.</li>
+                        <li><code>&lt;a&gt;</code>: Anchor tag to create hyperlinks.</li>
+                        <li><code>&lt;img&gt;</code>: Image tag for displaying pictures.</li>
+                    </ul>
+                </section>
+
+                <section id="attributes">
+                    <h2>HTML Attributes</h2>
+                    <p>Attributes provide additional information about HTML elements. They are defined in the opening tag and come in name/value pairs like this:</p>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+                    <p>In this example, <code>href</code> is an attribute that specifies the destination URL.</p>
+                </section>
+
+                <section id="practical-exercises">
+                    <h2>Practical Exercises</h2>
+                    <p>Try creating your own HTML document using the tags and structure discussed above. Here are a couple of exercises:</p>
+                    <ul>
+                        <li>Create a simple HTML page with a title, a heading, and a paragraph.</li>
+                        <li>Add an image and a hyperlink to your page.</li>
+                        <li>Experiment with different header tags (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) and observe how they appear in the browser.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div id="videoContent" class="hidden">
+                <h1>Video Tutorials</h1>
+                <p>Choose between textual explanations or these video tutorials for learning HTML:</p>
+                <div class="video-container">
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/UB1O30fR-EE" 
+                                title="HTML Crash Course for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Watch HTML Crash Course for Beginners on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/7x7u9L0ZQHs" 
+                                title="Learn HTML & CSS - Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=7x7u9L0ZQHs" target="_blank">Watch Learn HTML & CSS - Full Course on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/KJgsSFOSQv0" 
+                                title="HTML Tutorial for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=KJgsSFOSQv0" target="_blank">Watch HTML Tutorial for Beginners on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/XB4T1tLxGqM" 
+                                title="Advanced HTML5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=XB4T1tLxGqM" target="_blank">Watch Advanced HTML5 on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/eW8fU63nS8Q" 
+                                title="HTML in 15 minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=eW8fU63nS8Q" target="_blank">Watch HTML in 15 minutes on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/qoE8r6T2Wcw" 
+                                title="HTML & CSS Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=qoE8r6T2Wcw" target="_blank">Watch HTML & CSS Full Course on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/b3qX6E5vGdU" 
+                                title="Responsive Web Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=b3qX6E5vGdU" target="_blank">Watch Responsive Web Design on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/fgoGTFP8PlQ" 
+                                title="HTML Forms Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=fgoGTFP8PlQ" target="_blank">Watch HTML Forms Tutorial on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/ingh03aQOKM" 
+                                title="HTML Best Practices" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=ingh03aQOKM" target="_blank">Watch HTML Best Practices on YouTube</a></p>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/zD8rvkPWPmA" 
+                                title="HTML Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        <p><a href="https://www.youtube.com/watch?v=zD8rvkPWPmA" target="_blank">Watch HTML Overview on YouTube</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#team">Team</a>
+            <a href="#conditions">Terms and Conditions</a>
+            <a href="#privacy">Privacy Policy</a>
+            <p>&copy; 2024 Coding Academy</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get modal element
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        window.onload = function() {
+            modal.style.display = "block"; // Open modal on page load
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("closeModal");
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle the user's choice
+        document.getElementById("textLearning").onclick = function() {
+            document.getElementById("textContent").classList.remove("hidden");
+            document.getElementById("videoContent").classList.add("hidden");
+            modal.style.display = "none";
+        }
+
+        document.getElementById("videoLearning").onclick = function() {
+            document.getElementById("videoContent").classList.remove("hidden");
+            document.getElementById("textContent").classList.add("hidden");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
